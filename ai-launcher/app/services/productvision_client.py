@@ -43,7 +43,7 @@ def describe_product_base64(
         except Exception:
             return {"raw": text}  # fallback
 
-# (compatibilidad con tu código anterior si lo usas)
+
 def describe_product(image_url: str, desc_basica: str | None = None) -> dict:
     url = (CF_DESCRIBE_URL or "").strip()
     if not url:

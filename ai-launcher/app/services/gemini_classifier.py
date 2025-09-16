@@ -2,13 +2,13 @@
 import os, json
 import re
 import google.generativeai as genai
-# --- CAMBIO CRÍTICO AQUÍ: Cambiar la importación de types.GenerateContentConfig ---
+
 # Ahora importamos GenerationConfig directamente de genai
-from google.generativeai import GenerationConfig # <-- Forma correcta para la configuración de generación
+from google.generativeai import GenerationConfig 
 from google.api_core.exceptions import GoogleAPIError
 
 # Usar os.getenv para GEMINI_MODEL, que será cargado desde .env
-MODEL = os.getenv("MODEL_ID", "gemini-1.5-flash") # Usar MODEL_ID como en Cloud Run, pero con fallback
+MODEL = os.getenv("MODEL_ID", "gemini-1.5-flash") 
 
 api_key_value = os.getenv("GEMINI_API_KEY")
 
@@ -27,7 +27,7 @@ SYSTEM = ("Eres un analista de reclamos. Devuelve SOLO JSON con campos: "
           "{'Sentimiento':'positivo|neutral|negativo','Clasificacion':'producto|entrega|servicio|otros'}.")
 
 # Modificamos la firma para poder devolver un segundo valor para el error
-def classify_text(texto: str) -> tuple[dict, str]: # Ahora devuelve (resultado_dict, mensaje_error_str)
+def classify_text(texto: str) -> tuple[dict, str]:
     if not texto or not texto.strip():
         return {"Sentimiento":"neutral","Clasificacion":"otros"}, ""
 
@@ -38,7 +38,6 @@ def classify_text(texto: str) -> tuple[dict, str]: # Ahora devuelve (resultado_d
     error_message_detail = "" 
     
     try:
-        # --- CAMBIO CRÍTICO AQUÍ: Usar genai.GenerationConfig ---
         cfg = GenerationConfig( 
             temperature=0, # para respuestas más deterministas
         )

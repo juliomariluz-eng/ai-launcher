@@ -65,7 +65,7 @@ def _extract_job_id(obj_or_text) -> Optional[str]:
         if m: return m.group(0)
     return None
 
-# ---------- 1) Modo síncrono: espera banner_url (requiere que el flujo termine <~100s) ----------
+# ---------- 1) Modo síncrono: espera banner_url (requiere que el flujo termine) ----------
 def create_banner_with_two_images(*, image1_bytes: bytes, image2_bytes: bytes, prompt: str, timeout: int = 220) -> str:
     if not N8N_WEBHOOK_URL:
         raise N8NClientError("Falta N8N_WEBHOOK_URL en entorno.")
@@ -116,8 +116,6 @@ def start_banner_job(*, image1_bytes: bytes, image2_bytes: bytes, prompt: str, t
         "image1_base64": (None, _b64(image1_bytes)),
         "image2_base64": (None, _b64(image2_bytes)),
         "prompt":        (None, (prompt or "").strip()),
-        # si tu flujo distingue 'inmediato', puedes agregar banderas aquí
-        # "respond_immediately": (None, "1"),
     }
     try:
         resp = requests.post(N8N_WEBHOOK_URL, files=files, timeout=timeout)
@@ -150,7 +148,7 @@ def fetch_status(job_id: str, timeout: int = 10) -> Tuple[Optional[str], Optiona
     if not N8N_STATUS_URL:
         return None, None
     try:
-        # GET ?job_id=... (o POST, cambia si tu endpoint lo requiere)
+        
         r = requests.get(N8N_STATUS_URL, params={"job_id": job_id}, timeout=timeout)
         r.raise_for_status()
         data = r.json() if "json" in (r.headers.get("content-type") or "") else {}
