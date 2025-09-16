@@ -162,3 +162,7 @@ Permite **ver, ingresar y analizar feedback de usuarios en tiempo real**.
 - **Comentarios:** `data/sample_comments.csv`
 
 
+---
+
+## Funcionamiento de n8n y cloud run
+En la carpeta **informacion_apis** encontrará el detalle de como funcionan y como se contruyeron.
