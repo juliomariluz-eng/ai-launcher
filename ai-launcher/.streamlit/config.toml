@@ -1,0 +1,15 @@
+[theme]
+primaryColor="#FF3233"            # Rojo Alicorp para acentos (botones, pestañas seleccionadas)
+backgroundColor="#F0F2F6"         # Fondo general de la aplicación (el que definimos como background-light)
+secondaryBackgroundColor="#FFFFFF"  # Fondo secundario (para tarjetas, sidebars, etc.)
+textColor="#333333"               # Color de texto principal
+font="sans serif"
+
+
+[client]
+showDeployButton = false
+toolbarMode = "minimal" 
+# showSidebarNavigation = false 
+
+[browser]
+gatherUsageStats = false 

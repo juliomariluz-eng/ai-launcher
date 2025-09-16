@@ -1,0 +1,9 @@
+﻿streamlit
+requests
+pandas
+python-dotenv
+google-generativeai 
+supabase         
+altair               
+streamlit-autorefresh 
+wheel
