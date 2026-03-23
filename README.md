@@ -1,10 +1,6 @@
 # AI Launcher (Caso Alicorp)
 
-<div align="center">
-  <img src="images/hero-dashboard.png" alt="Dashboard AI Launcher" width="800"/>
-  <br>
-  <i>(Sugerencia: Coloca aquí una vista atractiva de la aplicación principal llamada "images/hero-dashboard.png")</i>
-</div>
+![Dashboard AI Launcher](images/hero-dashboard.png)
 
 <br>
 
@@ -31,11 +27,7 @@ Esta solución transforma procesos antes manuales y aislados en un flujo unifica
 
 ## 🏗 Arquitectura Técnica
 
-<div align="center">
-  <img src="images/arquitectura_alicorp.png" alt="Arquitectura de la Solución" width="800"/>
-  <br>
-  <i>(Sugerencia: Coloca aquí el diagrama de tu arquitectura llamado "images/arquitectura_alicorp.png")</i>
-</div>
+![Arquitectura de la Solución](images/arquitectura_alicorp.png)
 
 <br>
 
