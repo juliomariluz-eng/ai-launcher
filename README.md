@@ -1,4 +1,4 @@
-# AI Launcher (Caso Alicorp)
+# AI Launcher
 
 ![Dashboard AI Launcher](images/hero-dashboard.png)
 
