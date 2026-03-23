@@ -41,7 +41,7 @@ st.set_page_config(
 ALICORP_RED = "#FF3233"    # Rojo: RGB 255 50 51
 ALICORP_GREEN = "#78B928"  # Verde: RGB 120 185 40
 ALICORP_GREY = "#E2E5E4"   # Gris: RGB 226 229 228
-ALICORP_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Alicorp.svg/2560px-Alicorp.svg.png"
+ALICORP_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Alicorp.svg/960px-Alicorp.svg.png"
 APP_TITLE_TEXT = " Optimiza el corazón de tus operaciones"
 
 # Custom CSS para aplicar la paleta de colores y el estilo deseado
