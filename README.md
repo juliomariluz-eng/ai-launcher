@@ -1,6 +1,47 @@
-﻿# AI Launcher (n8n + Cloud Functions + Supabase + Streamlit)
+# AI Launcher (Caso Alicorp)
 
-Un starter práctico para lanzar flujos de IA de punta a punta: interfaz en **Streamlit**, servicios conectores (Gemini, n8n y Supabase) y endpoints en **Cloud Functions**.
+<div align="center">
+  <img src="images/hero-dashboard.png" alt="Dashboard AI Launcher" width="800"/>
+  <br>
+  <i>(Sugerencia: Coloca aquí una vista atractiva de la aplicación principal llamada "images/hero-dashboard.png")</i>
+</div>
+
+<br>
+
+**AI Launcher** es un starter práctico para lanzar flujos de IA de punta a punta: interfaz en **Streamlit**, servicios conectores (Gemini, n8n y Supabase) y endpoints en **Cloud Functions**.
+
+---
+
+## 🔍 Entendiendo el Problema
+En el ciclo de contenido y marketing se enfrentaban desafíos significativos:
+- **Descripciones de producto:** Creación manual, lenta y sin formato unificado.
+- **Imágenes promocionales:** Alta dependencia de equipos de diseño que retrasa las campañas.
+- **Feedback de usuarios:** Se recopila pero no se analiza ni se aprovecha para decisiones ágiles.
+
+## 💡 La Solución
+Se diseñó una plataforma web que integra tres módulos de IA para agilizar tareas clave: **generación de descripciones de producto**, **creación de imágenes promocionales** y **análisis automatizado de feedback**.
+
+Esta solución transforma procesos antes manuales y aislados en un flujo unificado, rápido y coherente, optimizando con IA la gestión completa del contenido y el aprendizaje del consumidor.
+
+### ✨ Valor para el Negocio
+- **10× más rápido:** Reduce tiempos de creación de días a minutos.
+- **Mayor volumen:** Posibilita generar múltiples piezas publicitarias en paralelo.
+- **Eficiencia de recursos:** Libera tiempo de diseño y redacción para tareas estratégicas.
+- **Mejor experiencia del consumidor:** Permite responder con rapidez y foco a sus necesidades.
+
+## 🏗 Arquitectura Técnica
+
+<div align="center">
+  <img src="images/arquitectura_alicorp.png" alt="Arquitectura de la Solución" width="800"/>
+  <br>
+  <i>(Sugerencia: Coloca aquí el diagrama de tu arquitectura llamado "images/arquitectura_alicorp.png")</i>
+</div>
+
+<br>
+
+- **Img Service:** API conectada mediante n8n para la composición y renderizado de imágenes.
+- **Copys Service:** API en Cloud Run usando Gemini para la generación inteligente de texto.
+- **Bot:** Agente de Telegram enlazado para clasificar los comentarios y feedback en tiempo real.
 
 ---
 
