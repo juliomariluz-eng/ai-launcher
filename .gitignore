@@ -1,0 +1,16 @@
+# Ignorar variables de entorno
+.env
+.env.*
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Python cache y compilados
+__pycache__/
+*.py[cod]
+
+# SO
+.DS_Store
+Thumbs.db
